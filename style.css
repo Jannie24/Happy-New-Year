@@ -1,0 +1,41 @@
+.small-heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    transform: rotate(-45deg);
+    animation: floatUp 4s ease-in-out forwards;
+}
+
+.small-heart::before,
+.small-heart::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.small-heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.small-heart::after {
+    left: 10px;
+    top: 0;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px) scale(0.5);
+        opacity: 0;
+    }
+}
+
+
